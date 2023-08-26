@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const options = {
+                strings: ["QUESTIONARIO SJT", "Marque a opção", "que melhor identifica", "Avaliação de habilidades"],
+                typeSpeed: 80, // Velocidade de digitação
+                backSpeed: 40, // Velocidade de apagar
+                startDelay: 500, // Atraso antes de começar
+                backDelay: 1000, // Atraso após apagar
+                loop: true, // Repetir o loop
+            };
+    
+            const typed = new Typed(".typed-text", options);
+        });
+        
+    </script>
+    
+
+    <main>
+
+        <header>
+
+            <h1><strong><span class="typed-text"></span></strong></h1>
+
+        </header>
+
+        <section>
+
+            <div>
+
+                <h2>Você tem trabalhado em um projeto que, embora interessante,provou ser demorado e um tanto desafiador,
+                    Algumas dessas dificuldades surgiram devido a um membro inexperiente da equipe que precisava de
+                    apoio extra para realizar seu potencial.
+                    Embora esta situação tenha apresentado muitos obstáculos, vocês dois conseguiram superá-los juntos e progredir
+                    Apesar de uma quantidade substancial de trabalho a ser feito no atual projeto,seu superior então pede que você lidere
+                    outro projeto envolvendo funcionários de outro departamento com os quais você não está familiarizado.
+                </h2>
+
+                <p>Vejamos algumas sugestões para o caso:</p>
+
+            </div>
+
+            <div>
+
+                <ol>
+
+                    <li>
+
+                        <input type="checkbox" class="opcao-checkbox" data-peso="33" value="suporteProjeto1">
+                        <label>Explique honestamente ao gerente que o atual projeto e colega de trabalho inexperiente precisam de suporte até a conclusão. Você prefere não abandonar o indivíduo e arriscar o projeto falhando.</label>
+                    
+                    </li>
+                    
+                    <li>
+
+                        <input type="checkbox" class="opcao-checkbox" data-peso="18" value="suporteProjeto2">
+                        <label>Assuma o segundo projeto e trabalhar horas extras para garantir que atenção suficiente possa ser dedicada a cada um. Assim, o colega menos experiente não será abandonado e há menos chance do primeiro projeto falhar.</label>
+                    
+                    </li>
+                    
+                    <li>
+
+                        <input type="checkbox" class="opcao-checkbox" data-peso="4" value="suporteProjeto3">
+                        <label>Informe o gerente que você adoraria contratar outro projeto com garantias de que ambos serão entregues com sucesso. Você também diz ao gerente que o colega de trabalho terá mais autonomia, mas que você estará no escritório para oferecer orientação, se necessário.</label>
+                    
+                    </li>
+                    
+                    <li>
+
+                        <input type="checkbox" class="opcao-checkbox" data-peso="45" value="suporteProjeto4">
+                        <label>Concordo com o segundo projeto e entrar em contato com o colega de trabalho inexperiente enquanto eles trabalham no primeiro projeto. Desta forma, você será capaz de manter um olho no primeiro projeto enquanto você gerencia o segundo.</label>
+                    
+                    </li>
+
+                </ol>
+
+            </div>
+
+            <div class="resposta">
+
+                <form onsubmit="return validarForm()">
+
+                    <input type="submit" value="Enviar">
+                    <input type="datetime-local" name="dia,mes,ano" id="mes">
+
+                </form>
+
+            </div>
+            
+            <script>
+
+                function validarForm() {
+                    var dateTimeInput = document.getElementById('mes');
+                    if (dateTimeInput.value === '') {
+                        alert('Por favor, preencha o campo de data e hora.');
+                        return false; // Impede o envio do formulário
+                    }
+                    return true; // Permite o envio do formulário
+                }
+
+            </script>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
